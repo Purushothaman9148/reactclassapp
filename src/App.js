@@ -1,30 +1,15 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import dhoni from "./pics/Dhoni.jpg";
 import virat from "./pics/Virat.jpg";
 import rohit from "./pics/Rohit.jpg";
-
+import raina from "./pics/Raina.jpg";
 
 function App() {
+  const names = [{ name: "Dhoni", pic: dhoni }, { name: "Virat", pic: virat }, { name: "Rohit", pic: rohit }, { name: "Rohit", Pic: raina }];
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <PlayerProfile playername="Dhoni" playerpic={dhoni} />
-      <PlayerProfile playername="Virat Kohli" playerpic={virat} />
-      <PlayerProfile playername="Rohit Sharma" playerpic={rohit} />
+      {names.map(({ name, pic }) => (<PlayerProfile playername={name} playerpic={pic} />))}
     </div>
   );
 }
