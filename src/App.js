@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import dhoni from "./pics/Dhoni.jpg";
+import virat from "./pics/Virat.jpg";
+import rohit from "./pics/Rohit.jpg";
+
 
 function App() {
   return (
