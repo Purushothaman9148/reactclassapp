@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +17,20 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <PlayerProfile playername="Dhoni" playerpic={dhoni} />
+      <PlayerProfile playername="Virat Kohli" playerpic={virat} />
+      <PlayerProfile playername="Rohit Sharma" playerpic={rohit} />
+    </div>
+  );
+}
+
+function PlayerProfile({ playername, playerpic }) {
+  return (
+    <div>
+      <img src={playerpic} alt="Not available" height="150px" width="150px" />
+      <h3> Name : {playername} 🏏</h3>
+      <br />
     </div>
   );
 }
